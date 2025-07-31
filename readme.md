@@ -101,7 +101,7 @@ Then visit [https://render.com](https://render.com), connect your repo, and depl
 ### 🔹 Cora AP Scores (Various Models)
 
 <p align="center">
-  <img src="results/cora/cora_ap_scores.png" width="400"/>
+  <img src="results/cora/Cora_AP.png" width="400"/>
 </p>
 
 ---
