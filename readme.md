@@ -88,7 +88,7 @@ Then visit [https://render.com](https://render.com), connect your repo, and depl
 ### 🔹 Cora Graph Structure
 
 <p align="center">
-  <img src="assets/cora_graph_structure.png" width="600"/>
+  <img src="results/cora/checkpoints/graph_Cora.png" width="600"/>
 </p>
 
 ### 🔹 GAT Training Loss (Cora)
