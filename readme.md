@@ -1,21 +1,21 @@
----
 
-### ✅ **Improved Version of Your README.md (Minimal Edits)**
+
+---
 
 ```markdown
 # 📊 Streamlit Data Analysis App
 
-An interactive, modular Streamlit web application for real-time data analysis, visualization, and reporting. Users can explore datasets via an intuitive UI and view analytical outputs directly in the browser.
+This is a modular and interactive Streamlit web application for graph-based data analysis and link prediction. It supports real-time data visualization, model evaluation, and graph plotting—specifically built for datasets like Cora.
 
 ---
 
 ## 🚀 Features
 
-- 📈 Real-time charts and data visualization
-- 🖥️ Clean and responsive Streamlit UI
-- ⚙️ Modular and customizable preprocessing workflows
-- 🧠 Extendable for machine learning integrations
-- 📁 Outputs and reports rendered in-browser
+- 📈 Visualize graph structures and training progress
+- 🤖 Includes traditional and deep learning-based link prediction
+- 🧮 Evaluation metrics (AUC, AP) for multiple models
+- 📊 Comparative performance charts
+- 🔌 Easily extendable for new datasets or graph models
 
 ---
 
@@ -24,22 +24,19 @@ An interactive, modular Streamlit web application for real-time data analysis, v
 ```
 
 Final\_Draft/
-├── app.py                # Main Streamlit application file
-├── modules/              # Python modules for processing and visualization
-│   ├── data\_loader.py
-│   └── utils.py
-├── output/               # Folder where outputs are saved
+├── app.py                # Main Streamlit app
+├── modules/              # Core Python modules
+├── output/               # Generated plots and reports
 ├── requirements.txt      # Python dependencies
-├── render.yaml           # Render.com deployment config
-└── README.md             # Project documentation
+├── render.yaml           # Render deployment configuration
+├── README.md             # Project overview
+└── LICENSE               # License file (MIT)
 
 ````
 
-> 🔧 Your directory may vary slightly depending on customization.
-
 ---
 
-## 🧪 Getting Started (Run Locally)
+## 🧪 Running the App Locally
 
 ### 1. Clone the Repository
 
@@ -52,10 +49,7 @@ cd final-draft
 
 ```bash
 python -m venv venv
-# Linux/macOS:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
@@ -64,38 +58,56 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Run the Streamlit App
+### 4. Start the Streamlit App
 
 ```bash
 streamlit run app.py
 ```
 
-> ⚠️ Replace `app.py` if your main file name differs.
-
 ---
 
-## 🌐 Deployment on Render.com
+## 🌐 Deploying on Render.com
 
-To deploy your app on [Render](https://render.com):
+Make sure your repository contains:
 
-1. Ensure your repo includes:
+* `requirements.txt`
+* `render.yaml`
 
-   * `requirements.txt`
-   * `render.yaml`
-
-2. Use this start command when setting up your Render Web Service:
+Start command for deployment:
 
 ```bash
 streamlit run app.py --server.port $PORT --server.enableCORS false
 ```
 
-3. Render will build and host your app with a public URL.
+Then visit [https://render.com](https://render.com), connect your repo, and deploy.
 
 ---
 
 ## 📸 Screenshots
 
-> *(Add relevant screenshots of your app interface here for better engagement.)*
+### 🔹 Cora Graph Structure
+
+<p align="center">
+  <img src="assets/cora_graph_structure.png" width="600"/>
+</p>
+
+### 🔹 GAT Training Loss (Cora)
+
+<p align="center">
+  <img src="assets/gat_training_loss.png" width="600"/>
+</p>
+
+### 🔹 Cora AUC Scores (Various Models)
+
+<p align="center">
+  <img src="assets/cora_auc_scores.png" width="400"/>
+</p>
+
+### 🔹 Cora AP Scores (Various Models)
+
+<p align="center">
+  <img src="assets/cora_ap_scores.png" width="400"/>
+</p>
 
 ---
 
@@ -114,11 +126,31 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions are welcome!
-Feel free to fork the repo and submit a pull request.
-For major changes, open an issue first to discuss.
+Pull requests are welcome. For major updates, open an issue first to discuss what you'd like to change.
 
 ---
+
+```
+
+---
+
+### 📁 How to Organize Your GitHub Repository
+
+```
+
+final-draft/
+├── app.py
+├── modules/
+├── output/
+├── assets/
+│   ├── cora\_graph\_structure.png
+│   ├── gat\_training\_loss.png
+│   ├── cora\_auc\_scores.png
+│   └── cora\_ap\_scores.png
+├── requirements.txt
+├── render.yaml
+├── LICENSE
+└── README.md
 
 ```
 
