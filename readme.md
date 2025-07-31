@@ -90,18 +90,18 @@ Then visit [https://render.com](https://render.com), connect your repo, and depl
 <p align="center"> <img src="results/cora/graph_Cora.png" width="600"/> </p>
 
 ### 🔹 GAT Training Loss (Cora)
-<p align="center"><img src="results/cora/Cora_loss_GAT.png" width="600"/></p>
+<p align="center"><img src="results/cora/Cora_loss_GAT.png" width="400"/></p>
 
 ### 🔹 Cora AUC Scores (Various Models)
 
 <p align="center">
-  <img src="results/cora/Cora_AUC.png" width="600"/>
+  <img src="results/cora/Cora_AUC.png" width="400"/>
 </p>
 
 ### 🔹 Cora AP Scores (Various Models)
 
 <p align="center">
-  <img src="assets/cora_ap_scores.png" width="400"/>
+  <img src="results/cora/cora_ap_scores.png" width="400"/>
 </p>
 
 ---
