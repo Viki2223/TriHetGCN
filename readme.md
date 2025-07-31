@@ -1,13 +1,9 @@
-Here is a clean and professional `README.md` file (no logo or banner) tailored for your **zipped Streamlit project folder** (`Final_Draft.zip`). You can extract the zip, add this `README.md` inside the same directory, and push everything to your GitHub repo.
-
 ---
-
 ### ✅ `README.md` for GitHub
-
 ```markdown
-# 📊 Final Draft – Streamlit Data Analysis App
+# 📊 Streamlit Data Analysis App
 
-**Final Draft** is an interactive and modular Streamlit web application built for data analysis, visualization, and reporting. It allows users to explore datasets through an intuitive web interface and view analytical outputs in real-time.
+This is an interactive and modular Streamlit web application built for data analysis, visualization, and reporting. It allows users to explore datasets through an intuitive web interface and view analytical outputs in real-time.
 
 ---
 
@@ -101,7 +97,7 @@ streamlit run app.py --server.port $PORT --server.enableCORS false
 ## 👤 Author
 
 **Vikram Kumar**
-[GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/your-profile)
+[GitHub](https://github.com/Viki2223) | [LinkedIn](https://www.linkedin.com/in/vikram-kumar-69a4a42a1/)
 
 ---
 
@@ -133,16 +129,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction...
 
-[rest same as previous response]
 ````
 
 ---
-
-Would you like me to package this into a `.zip` with:
-
-* `README.md`
-* `LICENSE`
-* `render.yaml` (optional)
-* `requirements.txt` (custom or auto-generated)
-
-Let me know if you want a zipped copy ready to upload to GitHub.
