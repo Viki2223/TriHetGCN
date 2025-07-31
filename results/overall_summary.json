@@ -1,10 +1,10 @@
 {
-    "best_auc": 95.31879498380664,
-    "best_ap": 93.52531730940132,
+    "best_auc": 94.63561487507984,
+    "best_ap": 93.09110319909611,
     "model_auc": "GCN",
     "model_ap": "GCN",
     "dataset_auc": "PubMed",
     "dataset_ap": "PubMed",
-    "avg_auc": 88.67364832929101,
-    "avg_ap": 89.92966903889238
+    "avg_auc": 87.6603066739937,
+    "avg_ap": 89.16877131310382
 }
