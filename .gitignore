@@ -1,0 +1,4 @@
+trihetgcn-env/
+__pycache__/
+*.pyc
+*.zip
