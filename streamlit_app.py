@@ -20,11 +20,12 @@ dataset_mapping = {
 }
 
 dataset = dataset_mapping[dataset_display]
+dataset_cap = dataset_display  # Capitalized name for file prefixes
 results_dir = f"results/{dataset}"
 
 # Display graph
 st.header("📌 Graph Structure with Hub Nodes")
-graph_img = f"{results_dir}/graph_{dataset}.png"
+graph_img = f"{results_dir}/graph_{dataset_cap}.png"
 if os.path.exists(graph_img):
     st.image(Image.open(graph_img), 
              caption=f"{dataset_display} Graph Structure", 
@@ -34,7 +35,7 @@ else:
 
 # Display model loss curves
 st.header("📉 Training Loss Curves")
-loss_files = glob.glob(f"{results_dir}/{dataset}_loss_*.png")
+loss_files = glob.glob(f"{results_dir}/{dataset_cap}_loss_*.png")
 if loss_files:
     cols = st.columns(2)
     for i, img_path in enumerate(loss_files):
@@ -50,7 +51,7 @@ else:
 st.header("📈 Performance Metrics Comparison")
 col1, col2 = st.columns(2)
 with col1:
-    auc_img = f"{results_dir}/{dataset}_AUC.png"
+    auc_img = f"{results_dir}/{dataset_cap}_AUC.png"
     if os.path.exists(auc_img):
         st.image(Image.open(auc_img), 
                  caption="AUC Comparison",
@@ -58,7 +59,7 @@ with col1:
     else:
         st.warning(f"AUC plot missing at {auc_img}")
 with col2:
-    ap_img = f"{results_dir}/{dataset}_AP.png"
+    ap_img = f"{results_dir}/{dataset_cap}_AP.png"
     if os.path.exists(ap_img):
         st.image(Image.open(ap_img), 
                  caption="AP Comparison",
@@ -75,22 +76,18 @@ if os.path.exists(summary_path):
     with open(summary_path) as f:
         summary = json.load(f)
     
-    # Create two columns for metrics
     col1, col2 = st.columns(2)
     
-    # Best AUC
     with col1:
         st.subheader("Best AUC")
         st.metric(label="Highest AUC Score", value=f"↑ {summary['best_auc']:.2f}%")
         st.caption(f"Achieved by {summary['model_auc']} on {summary['dataset_auc']} dataset")
         
-    # Best AP
     with col2:
         st.subheader("Best AP")
         st.metric(label="Highest AP Score", value=f"↑ {summary['best_ap']:.2f}%")
         st.caption(f"Achieved by {summary['model_ap']} on {summary['dataset_ap']} dataset")
     
-    # TriHetGCN Performance
     st.subheader("TriHetGCN Performance")
     col3, col4 = st.columns(2)
     with col3:
@@ -105,11 +102,10 @@ else:
     st.warning("Overall summary not found. Please run training first.")
 
 # Paper Comparison Table
-paper_csv = f"{results_dir}/{dataset}_paper_comparison.csv"
+paper_csv = f"{results_dir}/{dataset_cap}_paper_comparison.csv"
 if os.path.exists(paper_csv):
     df_paper = pd.read_csv(paper_csv)
     
-    # Format differences with color
     def color_diff(val):
         if val >= 0:
             return 'color: green; font-weight: bold'
@@ -117,7 +113,7 @@ if os.path.exists(paper_csv):
             return 'color: red; font-weight: bold'
     
     styled_df = df_paper.style.applymap(color_diff, 
-                                      subset=['AUC Difference', 'AP Difference'])
+                                        subset=['AUC Difference', 'AP Difference'])
     
     st.subheader("🔍 Detailed Comparison with Paper")
     st.dataframe(styled_df.format({
@@ -133,7 +129,7 @@ else:
 
 # Paper Comparison
 st.header("📚 Comparison with Published Results")
-paper_comparison_img = f"{results_dir}/{dataset}_paper_comparison.png"
+paper_comparison_img = f"{results_dir}/{dataset_cap}_paper_comparison.png"
 if os.path.exists(paper_comparison_img):
     st.image(Image.open(paper_comparison_img), 
              caption=f"Paper Comparison - {dataset_display}",
