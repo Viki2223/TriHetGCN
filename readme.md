@@ -113,10 +113,6 @@ Then visit [https://render.com](https://trihetgcn.onrender.com), connect your re
 
 ---
 
-## 🪪 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 ## 🤝 Contributing
