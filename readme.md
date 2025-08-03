@@ -79,7 +79,7 @@ Start command for deployment:
 streamlit run app.py --server.port $PORT --server.enableCORS false
 ```
 
-Then visit [https://render.com](https://trihetgcn.onrender.com), connect your repo, and deploy.
+Then visit (https://trihetgcn.onrender.com), connect your repo, and deploy.
 
 ---
 
@@ -146,3 +146,4 @@ final-draft/
 ```
 
 ```
+
